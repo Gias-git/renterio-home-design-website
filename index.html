@@ -1,14 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Renterio</title>
 
+    <!-- DaisyUi + Tailwind css CDN-->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 
-    
+    <!-- font-awesome CDN -->
+
+    <script src="https://kit.fontawesome.com/393a2dcbd6.js" crossorigin="anonymous"></script>
+
+    <!-- font-family CDN -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+
+    <!-- customizing your config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'bgBtn': '#ABEF5F',
+                    },
+                    Fontfamily: {
+                        'manrope': ['Manrope', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-    
+
+<body class="font-[manrope]">
+
+    <!-- Heder Section -->
+    <header class="container mx-auto px-5 py-6  bg-gray-100">
+
+        <!-- navbar -->
+        <nav class="xl:w-[1260px] mx-auto">
+            <div class="navbar">
+                <div class="navbar-start">
+
+
+                    <a class="text-3xl font-bold flex justify-center items-center">
+                        <button class="w-7 h-7 rounded-full bg-bgBtn relative ml-2 mr-2"><i
+                                class="fa-solid absolute top-0.5 left-2 fa-arrow-right -rotate-45 text-base"></i></button>
+                        Rinterio</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1">
+                        <li><a class="font-bold">Home</a></li>
+                        <li><a>Services</a></li>
+                        <li><a>Portfolio</a></li>
+                        <li><a>Blogs</a></li>
+                        <li><a>Contact Us</a></li>
+                    </ul>
+                </div>
+
+
+
+
+                <!-- navbar-end -->
+                <div class="navbar-end ">
+                    <div class="dropdown relative">
+                        <div tabindex="0" role="button" class=" lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content dropdown-content-right bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow absolute right-0 ">
+                            <li><a>Home</a></li>
+                            <li><a>Services</a></li>
+                            <li><a>Portfolio</a></li>
+                            <li><a>Blogs</a></li>
+                            <li><a>Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="hidden lg:block xl:space-x-5 lg:space-x-1 xl:flex">
+                        <button class="bg-white p-4 rounded-full lg:hidden xl:block">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1"
+                                stroke="currentColor" class="size-5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                            </svg>
+
+                        </button>
+
+                        </button>
+
+                        <button class="bg-white p-4 rounded-full lg:hidden xl:block">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1"
+                                stroke="currentColor" class="size-5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                            </svg>
+
+                        </button>
+
+                        <a class="btn bg-bgBtn rounded-full font-extrabold text-lg">Book Consult <button
+                                class="w-7 h-7 rounded-full bg-black relative ml-2 mr-2"><i
+                                    class="fa-solid absolute top-0.5 left-2 fa-arrow-right -rotate-45 text-base text-white"></i></button></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+        <!-- banner section -->
+
+        <section class="mt-9 mb-10 md:mb-12 xl:w-[1260px] mx-auto flex flex-col  items-center">
+            <img class="mx-auto" src="assets/banner.png" alt="">
+            <h1 class="text-3xl w-full md:w-10/12 md:text-4xl lg:text-6xl font-extrabold text-center my-6 ">A barn house
+                of this design has a striking appearance</h1>
+            <p class="text-base font-base text-center w-full md:w-10/12">The barn house captivates with its blend of
+                rustic charm and modern sophistication, featuring weathered wood, sleek metal accents, and large windows
+                that flood the space with natural light.</p>
+
+            <a class="btn bg-[#ABEF5F80] rounded-full font-extrabold text-lg mt-8">View Details <button
+                    class="w-7 h-7 rounded-full bg-bgBtn relative ml-2 mr-2"><i
+                        class="fa-solid absolute top-0.5 left-2 fa-arrow-right -rotate-45 text-base text-black"></i></button></a>
+
+        </section>
+
+
+
+
+    </header>
+
+
+    <!-- Main section -->
+    <main>
+        <!-- about-us section -->
+        <section class="bg-gray-300">
+            <img src="assets/Vector.png" alt="">
+            <!-- text-content -->
+            <div>
+
+                <button class="flex gap-2">
+
+                    <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                      </svg></span>
+                     About Us
+            
+                </button>
+
+
+            </div>
+            <!-- picture -->
+            <div></div>
+
+        </section>
+
+
+
+    </main>
+
+    <!-- Footer section -->
+    <Footer></Footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
+
 </html>
